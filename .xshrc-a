@@ -1,0 +1,9 @@
+#
+
+export SSH_AUTH_SOCK=$(/bin/launchctl getenv SSH_AUTH_SOCK_METHOD2)
+export SSH_AGENT_PID=$(/bin/launchctl getenv SSH_AGENT_PID_METHOD2)
+for c in scp sftp slogin ssh ssh-add ssh-agent ssh-keygen ssh-keyscan; do
+  alias $c=/usr/local/bin/$c
+done
+
+# end of file

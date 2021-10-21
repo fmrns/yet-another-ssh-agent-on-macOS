@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>local.method2.ssh-agent</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/est/bin/ssh-agent-homebrew.sh</string>
+		<!-- string>SSH_AUTH_SOCK_METHOD2</string -->
+		<!-- string>SSH_AGENT_PID_METHOD2</string -->
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>

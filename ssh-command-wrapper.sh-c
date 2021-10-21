@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# usage: 
+#   cd to the dirctory contains this file.
+#   chmod a-w,a+x ssh-command-wrapper.sh
+#   for c in scp sftp slogin ssh ssh-add ssh-agent ssh-keygen ssh-keyscan; do
+#     ln -s ssh-command-wrapper.sh ~/bin/$c
+#   done
+
+exec /usr/bin/env \
+  SSH_AUTH_SOCK=$(/bin/launchctl getenv SSH_AUTH_SOCK_METHOD2) \
+  SSH_AGENT_PID=$(/bin/launchctl getenv SSH_AGENT_PID_METHOD2) \
+  "/usr/local/bin/$(basename $0)" "$@"
+
+# end of file

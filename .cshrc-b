@@ -1,0 +1,7 @@
+#
+
+foreach c (scp sftp slogin ssh ssh-add ssh-agent ssh-keygen ssh-keyscan)
+  alias $c '/usr/bin/env SSH_AUTH_SOCK=`/bin/launchctl getenv SSH_AUTH_SOCK_METHOD2` SSH_AGENT_PID=`/bin/launchctl getenv SSH_AGENT_PID_METHOD2` '/usr/local/bin/$c
+end
+
+# end of file
